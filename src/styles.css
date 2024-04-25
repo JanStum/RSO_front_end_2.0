@@ -45,5 +45,13 @@ a:hover {
   padding: 20px;
   font-family: Arial, sans-serif;
   color: #333;
+  text-align:justify;
 }
+
+.subtitle-content img, .subtitle-content video {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+}
+
 

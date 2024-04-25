@@ -12,9 +12,7 @@ class SubtitlePage extends React.Component {
             <p>{subtitle.content}</p>
           </div>
         ) : (
-          <div className="subtitle-content">
-            <h2>Podnaslov ni najden</h2>
-          </div>
+          <div className="subtitle-content"></div>
         )}
       </div>
     );
