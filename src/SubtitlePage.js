@@ -1,10 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SubtitlePage extends React.Component {
   render() {
-    const { subtitles } = this.props;
-    const subtitleName = window.location.pathname.split('/').pop();
-    const subtitle = subtitles.find((subtitle) => subtitle.name === subtitleName);
+    const { subtitle } = this.props;
     return (
       <div>
         {subtitle ? (
@@ -14,7 +13,7 @@ class SubtitlePage extends React.Component {
           </div>
         ) : (
           <div className="subtitle-content">
-            <h2>Subtitle Not Found</h2>
+            <h2>Podnaslov ni najden</h2>
           </div>
         )}
       </div>
@@ -23,6 +22,4 @@ class SubtitlePage extends React.Component {
 }
 
 export default SubtitlePage;
-
-
 
