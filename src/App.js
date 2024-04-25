@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import './styles.css';
 import SubtitlePage from './SubtitlePage.js';
-
+/*komentar*/
 class App extends React.Component {
   constructor(props) {
     super(props);
