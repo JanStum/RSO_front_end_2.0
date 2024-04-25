@@ -1,158 +1,49 @@
-/*body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  background-image: url('ozadje.jpg');
-  background-size: cover;
-}
-
-.arrow-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 0, 0.7);
-  padding: 50px 0;
-  width: 80vw;
-  max-width: 1000px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.arrow-container::after {
-  content: '';
-  position: absolute;
-  top: calc(-16% - 60px); // Položaj vrha trikotnika 
-  right: -229px; // Položaj desne strani trikotnika glede na trak 
-  width: 0;
-  height: 0;
-  border-top: 150px solid transparent; // Velikost trikotnika 
-  border-bottom: 150px solid transparent; // Velikost trikotnika 
-  border-left: 230px solid rgba(255, 255, 0, 0.7); // Velikost trikotnika in barva 
-}
-
-ul {
-  
-  list-style-type: none;
-  padding-left: 20px;
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  
-}
-
-li {
-  text-align: left;
-  flex-grow: 1;
-  position: relative;
-  padding-top: 5px;
-}
-
-a {
-  text-decoration: none;
-  color: #07500b;
-  display: block;
-  position: relative;
-  z-index: 1; Nastavi Z-indeks, da se lahko klikne čez sliko 
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.year-image-container {
-  position: absolute;
-  top: 50px; Položaj slike nad letnico
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0; Postavi sliko pod besedilo
-}
-
-.year-image {
-  display: block;
-  margin: auto;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-}
-
-.year-image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  display: none;
-}
-
-.year-image-container:hover .year-image-overlay {
-  display: block;
-}
-*/
-/* Nastavitve za h1 naslov */
-/* Nastavitve za h1 naslov */
-/* Nastavitve za h1 naslov */
-/* Nastavitve za h1 naslov */
 h1 {
   text-align: center;
   margin-top: 20px;
-  font-family: Arial, sans-serif; /* Izberemo pisavo */
-  color: #4a4a4a; /* Temno siva barva naslova */
-  font-size: 24px; /* Velikost naslova */
+  font-family: Arial, sans-serif;
+  color: #4a4a4a;
+  font-size: 24px;
 }
 
-/* Glavni kontejner */
 .container {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
-  background-color: #8f8f8f; /* Temno siva barva ozadja */
-  padding: 20px; /* Dodamo padding */
+  padding: 20px;
 }
 
-/* Stranska vrstica */
 .sidebar {
   width: 300px;
   padding: 20px;
-  background-color: #e2dcf7; /* Svetlo siva barva ozadja */
-  border: px solid #dcdcdc; /* Svetlo siva barva roba */
-  border-radius: 10px; /* Zaobljeni robovi */
-  box-shadow: 0 0 100px rgba(255, 255, 255, 0.2); /* Sencanje */
+  background-color: #e2dcf7;
+  border: px solid #dcdcdc;
+  border-radius: 10px;
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.2);
 }
 
-/* Vsebina */
 .content {
   flex-grow: 1;
 }
 
-/* Odstranimo podčrtaj za povezave */
 a {
   text-decoration: none;
-  color: #2f2f2f; /* Temno siva barva besedila povezave */
+  color: #2f2f2f;
 }
 
-/* Barva povezav ob hoverju */
 a:hover {
-  color: #008cba; /* Modra barva besedila povezave ob hoverju */
+  color: #008cba;
 }
 
-/* Stil za vsebino podnaslova */
 .subtitle-content {
-  background-color: #fff;
-  border: 1px solid #dcdcdc; /* Svetlo siva barva roba */
+  background-color: lightgray;
+  border: 1px solid #dcdcdc;
   border-radius: 10px;
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  font-family: Arial, sans-serif; /* Izberemo pisavo */
-  color: #333; /* Temno siva barva besedila */
-  box-shadow: 0 0 100px rgba(255, 255, 255, 0.2); /* Sencanje */
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 

@@ -1,5 +1,6 @@
-import React from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'; 
+import { BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom';
+import axios from "axios"; 
 import './styles.css';
 import SubtitlePage from './SubtitlePage.js';
 /*komentar*/
@@ -7,6 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      /*
       subtitles: [
         { id: 1, name: 'Osnovni pojmi v AI', content: `Umetna inteligenca (UI) je široko področje računalništva, ki se ukvarja z ustvarjanjem inteligentnih agentov, ki so sistemi, ki lahko samostojno razmišljajo, delujejo in se učijo. Nekateri osnovni pojmi v umetni inteligenci so:
 
@@ -125,10 +127,34 @@ class App extends React.Component {
         Upam, da vam je ta kratek pregled etičnih izzivov in odgovornosti pri umetni inteligenci dal koristen uvod v to pomembno temo.
         ` },
       ],
+      */
+      subtitles:[],
       selectedSubtitle: null, 
+      error: null
     };
-  }
+    
+    this.fetchData();
+  };
 
+  fetchData = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/api/text');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const jsonData = await response.json();
+
+      this.setState({ subtitles: jsonData });
+    } catch (error) {
+      this.setState({ error: error.message });
+    }
+  };
+
+  /*
+  componentDidMount() {
+    this.fetchData();
+  }
+*/
   handleSubtitleClick = (subtitle) => {
     this.setState({ selectedSubtitle: subtitle });
   };
@@ -154,6 +180,7 @@ class App extends React.Component {
           <div className="content">
             <Routes>
               <Route path="/" element={<Home />} />
+              
               {this.state.subtitles.map((subtitle) => (
                 <Route key={subtitle.id} path={`/subtitles/${subtitle.name}`} element={<SubtitlePage subtitle={subtitle} />} />
               ))}
@@ -169,7 +196,7 @@ function Home() {
   return (
     <div className="subtitle-content">
       <h2></h2>
-      <p>Welcome to the AI Subtitles App!</p>
+      <p>Dobrodošli na spletno stran Umetna inteligenca!</p>
     </div>
   );
 }
